@@ -9,7 +9,6 @@ class UUL:
     It allows multiple currencies to be handled at once, each represented by a :class:`Currency` object. Each currency can be accessed by its name as the attribute under currencies.
 
     :param currencies: A list of :class:`Currency` objects or a single :class:`Currency` object to initialize the UUL with.
-    :type currencies: Union[List[Currency], Currency]
     :raises DuplicateCurrencyName: Gets raised if two currencies have the same name.
 
     Example:
