@@ -9,6 +9,8 @@
 import sphinx_material
 import os
 import sys
+import subprocess
+import shutil
 
 # Add the path to your module folder
 sys.path.insert(0, os.path.abspath('..'))
@@ -52,3 +54,18 @@ html_theme_options = {
     'css_minify' : True,
     #'logo_icon' : '',
 }
+
+# Define the location of the parent directory
+parent_directory = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
+
+# Build the wheel using pip wheel
+subprocess.run(["pip", "wheel", parent_directory, "-w", os.path.join(parent_directory, "_build", "pages")])
+
+# List of example files to copy
+example_files = ["content.py", "index.css"]
+
+# Copy example files from the parent directory to the Sphinx build directory
+for example_file in example_files:
+    example_src_path = os.path.join(parent_directory, "examples", "browser", example_file)
+    example_dest_path = os.path.join(parent_directory, "_build", "pages", example_file)
+    shutil.copy(example_src_path, example_dest_path)
