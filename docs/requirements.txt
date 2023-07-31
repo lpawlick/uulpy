@@ -1,0 +1,2 @@
+Sphinx==7.1.1
+sphinx-material @ git+https://github.com/lpawlick/sphinx-material

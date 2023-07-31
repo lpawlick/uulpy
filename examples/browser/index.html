@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body> 
+        <py-config>
+            packages = ["./uulpy-0.1.0-py3-none-any.whl"]
+        </py-config>
+        <main>
+            <div id="left-div">
+                <button
+                    id="main-click"
+                    class="py-button"
+                    type="submit"
+                    py-click="click()"
+                >
+                    Click!
+                </button>
+            </div>
+            <div id="right-div">
+                <div id="money-container" class="font-mono">
+                    Current money: <span id="current-money">0 $</span>
+                </div>
+            </div>
+        </main>
+        <py-script src="./content.py"/>
+    </body>
+</html>

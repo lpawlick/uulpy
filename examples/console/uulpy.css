@@ -1,0 +1,21 @@
+Screen 
+{
+    background: $surface-darken-1;
+}
+
+#left-tab
+{
+    display: block;        
+    max-width: 50%;
+    scrollbar-gutter: stable;
+    overflow: auto;    
+    width: auto;    
+    height: 100%;            
+    dock: left;       
+}
+
+#right-tab
+{
+    overflow: auto scroll;  
+    min-width: 100%;        
+}

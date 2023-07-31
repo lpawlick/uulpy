@@ -1,0 +1,13 @@
+[project]
+name = "uulpy"
+description = ""
+version = "0.1.0"
+authors = [
+        { name = "lpawlick" }
+    ]
+dependencies = [
+
+    ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
